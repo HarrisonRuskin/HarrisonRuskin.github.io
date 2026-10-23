@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Portfolio</title>
+</head>
+
+<script>
+function loadGame(container) {
+    const iframe = document.createElement("iframe");
+    iframe.src = "Games/mnt Z/index.html";
+    iframe.allowFullscreen = true;
+    container.innerHTML = "";
+    container.appendChild(iframe);
+}
+</script>
+
+<body>
+    <div class="background">
+        <div class="square square1"></div>
+        <div class="square square2"></div>
+        <div class="square square3"></div>
+        <div class="square square4"></div>
+        <div class="square square5"></div>
+    </div>
+
+    <div class="banner">
+        <h1>Harrison Ruskin's Portfolio</h1>
+    </div>
+
+    <div class="content">
+        <h1>Games</h1>
+    </div>
+
+    <div class="grid">
+        <div class="game">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/qk583denvNs?si=_MaQThS_gOyvx-QH&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <details>
+                <summary>About</summary>
+                <p>
+                    EyeBall-et Hell is a game I made over 2 weeks for a year 11 Media project. We were tasked with creating 2 related pieces of media. For my project, I chose to make a game inspired by arcade bullet hells using Pygame and a sprite editor I developed myself. I also made a poster similar to what you would see in a game CD case to accompany the game.
+                </p>
+            </details>
+        </div>
+
+        <div class="game">
+            <iframe frameborder="0" src="https://itch.io/embed/2806396?border_width=5&amp;bg_color=464d56&amp;link_color=f0b752&amp;border_color=464d56" width="560" height="175"><a href="https://harrisonr.itch.io/fish-for-chips">Fish for Chips by Chewy, Stoneeeeemo</a></iframe>
+            <details>
+                <summary>About</summary>
+                <p>Fish for Chips is a game I made for a week-long game jam. I partnered with a team member who created all the sounds and music for the game. This is the first game I finished as part of a team.</p>
+            </details>
+        </div> 
+
+        <div class="game">
+            <iframe src="Games/mnt Z/index.html" width="350" height="350"></iframe>
+            <details>
+                <summary>About</summary>
+                <p>Mountain: Z is one of the first games I made with Pico-8. I spent around a week and a half developing it, though it wasn't for a game jam or under any time restrictions, unlike the other three games on this page.</p>
+            </details>
+        </div>
+
+        <div class="game">
+            <iframe frameborder="0" src="https://itch.io/embed/5063489?border_width=5&amp;bg_color=8c6aba&amp;link_color=35c9ff&amp;border_color=8c6aba" width="560" height="175"><a href="https://harrisonr.itch.io/crystal-liberators">Crystal Liberators by Chewy</a></iframe>
+            <details>
+                <summary>About</summary>
+                <p>Crystal Liberators is the most recent game I've made and published online. The game was made for a forty-eight-hour game jam with the theme of crystals. I wanted to make a game about a world inspired by The Dark Crystal, where a central crystal would slowly corrupt the world and the player, a knight, is tasked with shattering it to restore order. Though as the deadline aproached I unfortunately had to sacrifice the narritive.</p>
+            </details>
+        </div> 
+    </div>
+
+    <div class="content">
+        <h1>Films</h1>
+    </div>
+
+    <div class="grid">
+        <div class="game">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZRGLqpwiG9I" title="Short film Blue Journey" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <details>
+                <summary>About</summary>
+                <p>Blue Journey is a short film I participated in. It was directed by Olivier Vaughan, and I contributed minor story direction while acting as the main antagonist in the film.</p>
+            </details>
+        </div>
+
+        <div class="game">
+            <iframe src="https://drive.google.com/file/d/1so_6-PBrbdsoivJ86AnHrJWWS2J3KfQz/preview" width="100%" height="400" allow="autoplay" allowfullscreen> </iframe>
+
+            <details>
+                <summary>About</summary>
+                <p>Skate Part is a short comedy skate video I made to try editing with Premiere Pro for the first time. I made it in less than 10 hours, including both filming and editing.</p>
+            </details>
+        </div>
+    </div>
+</body>
+</html>
