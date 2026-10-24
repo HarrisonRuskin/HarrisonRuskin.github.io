@@ -13,6 +13,8 @@ const colours = [
     "#1f883f"
 ];
 
+let particleColours = [...colours];
+
 function resize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -34,7 +36,7 @@ function animate() {
         const speed = starSpeed + star.depth * 2;
 
         star.y += speed * speedMult;
-        star.x += star.xDrift * star.driftSpeed
+        star.x += star.xDrift * star.driftSpeed;
 
         if (star.y > canvas.height) {
             star.y = 0;
@@ -43,8 +45,12 @@ function animate() {
         }
 
         ctx.globalAlpha = 0.2 + star.depth * 0.8;
-        const colourIndex = Math.floor(star.depth * colours.length);
-        ctx.fillStyle = colours[Math.min(colourIndex, colours.length - 1)];
+
+        const colourIndex = Math.floor(star.depth * particleColours.length);
+        ctx.fillStyle = particleColours[
+            Math.min(colourIndex, particleColours.length - 1)
+        ];
+
         ctx.fillRect(star.x, star.y, size, size);
     }
 
@@ -58,8 +64,19 @@ const nextButton = document.getElementById("next");
 let current = 0;
 let animating = false;
 
+function updateSlideStyle(slide) {
+    if (slide.dataset.bg) {
+        document.body.style.background = slide.dataset.bg;
+    }
+
+    if (slide.dataset.particles) {
+        particleColours = slide.dataset.particles.split(",").map(c => c.trim());
+    }
+}
+
 nextButton.addEventListener("click", () => {
     if (animating || slides.length < 2) return;
+
     animating = true;
 
     const previous = slides[current];
@@ -74,6 +91,7 @@ nextButton.addEventListener("click", () => {
     previous.classList.add("leaving");
 
     current = nextIndex;
+    updateSlideStyle(next);
 
     setTimeout(() => {
         previous.classList.remove("active", "leaving");
@@ -83,8 +101,10 @@ nextButton.addEventListener("click", () => {
     }, 600);
 });
 
-
 window.addEventListener("resize", resize);
 
 resize();
+
+updateSlideStyle(slides[current]);
+
 animate();

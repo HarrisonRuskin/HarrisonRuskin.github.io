@@ -15,7 +15,7 @@ p {
 }
 
 body {
-    background: linear-gradient(to bottom, #0d031f, #06010f, #030107);
+    background: linear-gradient(to bottom, #0d031f, #030107);
     background-attachment: fixed;
     height: 100%;
     margin: 0;
@@ -183,6 +183,20 @@ body {
     height: auto;
 }
 
+.image-list-large {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 0px;
+}
+
+.image-list-large img {
+    margin-top: 0;
+    width: 400px;
+    height: auto;
+}
+
 .content-row {
     display: flex;
     justify-content: space-between;
@@ -205,6 +219,7 @@ body {
 
 .right-text-container {
     flex-shrink: 0;
+    align-self: flex-end;
 }
 
 .right-text-container p {
